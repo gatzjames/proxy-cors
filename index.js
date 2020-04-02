@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const express = require("express");
 const cors = require("cors");
 const { createProxyMiddleware } = require("http-proxy-middleware");
@@ -30,5 +29,5 @@ app.use(
 );
 
 app.listen(PORT || 4000, () => {
-  console.log("Proxy listening on port: ", PORT);
+  console.log("Proxy listening on port: ", PORT || 4000);
 });
